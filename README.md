@@ -1,4 +1,10 @@
-# MyApp
+
+# Angular basic features setup
+
+## Examplifies:
+- Angular testing of mocked service(Library).
+- Component(Main) reload on route call with transient dependency injection.
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
 
