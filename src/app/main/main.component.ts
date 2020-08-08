@@ -6,14 +6,14 @@ import { Router } from '@angular/router';
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss'],
-  providers: [LibraryService], // instantiates new transient service on each route call
+  providers: [LibraryService], // Instantiates new service on each route call
 })
 export class MainComponent implements OnInit {
   constructor(private adapter: LibraryService, private router: Router) {
-    console.log('main instatiated');
+    console.log('main instantiated');
   }
 
-  // reloads component on each route call
+  // Reloads component on each route call
   ngOnInit(): void {
     console.log('main init');
     console.log(this.adapter.read());

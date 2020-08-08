@@ -33,15 +33,15 @@ describe('mainComponent', () => {
   });
 
   it('main ngInit should call read method on adapter', () => {
-    const someMockService = fixture.debugElement.injector.get<LibraryService>(LibraryService);
-    const spy = spyOn(someMockService, 'read');
+    const libraryServiceMock = fixture.debugElement.injector.get<LibraryService>(LibraryService);
+    const spy = spyOn(libraryServiceMock, 'read');
     component.ngOnInit();
     expect(spy).toHaveBeenCalled();
   });
 
   it('library service read method should return value from mock method', () => {
-    const someMockService = fixture.debugElement.injector.get<LibraryService>(LibraryService);
-    const readValue = someMockService.read();
+    const libraryServiceMock = fixture.debugElement.injector.get<LibraryService>(LibraryService);
+    const readValue = libraryServiceMock.read();
     component.ngOnInit();
     expect(readValue).toBe('library service mock read method');
   });
