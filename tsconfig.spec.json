@@ -2,6 +2,9 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
+    "paths": {
+      "@services/*": ["src/app/InjectableServices/*"]
+    },
     "outDir": "./out-tsc/spec",
     "types": [
       "jasmine"

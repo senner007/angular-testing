@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { LibraryService } from './library.service';
+import { LibraryService } from '@services/library/library.service';
 
 describe('LibraryService', () => {
   let service: LibraryService;
