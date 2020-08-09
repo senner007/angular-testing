@@ -4,6 +4,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { LibraryService } from '../InjectableServices/library/library.service';
 import { LibraryServiceMock } from '../InjectableServices/library/library.service.mock';
 
+
 describe('mainComponent', () => {
   let component: MainComponent;
   let fixture: ComponentFixture<MainComponent>;
@@ -32,17 +33,11 @@ describe('mainComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('main ngInit should call read method on adapter', () => {
+  it('main ngInit should call read method on library mock', () => {
     const libraryServiceMock = fixture.debugElement.injector.get<LibraryService>(LibraryService);
     const spy = spyOn(libraryServiceMock, 'read');
     component.ngOnInit();
+    expect(libraryServiceMock instanceof LibraryServiceMock).toBe(true);
     expect(spy).toHaveBeenCalled();
-  });
-
-  it('library service read method should return value from mock method', () => {
-    const libraryServiceMock = fixture.debugElement.injector.get<LibraryService>(LibraryService);
-    const readValue = libraryServiceMock.read();
-    component.ngOnInit();
-    expect(readValue).toBe('library service mock read method');
   });
 });

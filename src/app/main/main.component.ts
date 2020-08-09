@@ -9,6 +9,7 @@ import { LibraryService } from '@services/library/library.service';
   providers: [LibraryService], // Instantiates new service on each route call
 })
 export class MainComponent implements OnInit {
+
   constructor(private library: LibraryService, private router: Router) {
     console.log('main instantiated');
   }
