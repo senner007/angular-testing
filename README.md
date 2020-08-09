@@ -6,10 +6,6 @@
 - Component(Main) reload on route call with transient dependency injection.
 - import aliases
   
-## Note:
-- Intellisense is currently broken. Update wehn fixed
-https://github.com/angular/angular-cli/issues/18040
-
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
 
